@@ -1,14 +1,10 @@
 package org.nishi.helper;
 
 /**
- * Objects of this class are not to be created.
  * @author Nishi Inc.
  * @since v0.0.1
  */
-public final class GlobalConstants {
-
-    // Singleton
-    private GlobalConstants(){}
+public abstract class GlobalConstants {
 
     public static final int ASCII_ZERO          =   48;
 
@@ -47,5 +43,8 @@ public final class GlobalConstants {
     public static final String RIGHT_SQUARE_BRACKET =   "]";
     public static final String DECIMAL_POINT_STR    =   ".";
     public static final String ENGINEERING_SYMBOL   =   "E";
+
+    public static final String AND              =   "AND";
+    public static final String OR               =   "OR";
 
 }

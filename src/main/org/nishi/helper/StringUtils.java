@@ -8,30 +8,32 @@ import java.util.List;
  * @author Nishi Inc
  * @since v0.0.1
  */
-public final class StringUtils {
+public final class StringUtils extends org.apache.commons.lang3.StringUtils {
 
     // Singleton
     private StringUtils(){}
 
     /**
      *
-     * @param str
-     * @return <code>true</code> if the given string is null or containing of only whitespaces else <code>false</code>
+     * @param strings
+     * @return <code>true</code> if all of the given strings are null or containing of only whitespaces else <code>false</code>
      */
-    public static boolean isBlank(String  str) {
-        if(str == null || str.trim().length() == 0) {
-            return true;
+    public static boolean isBlank(CharSequence[]  strings) {
+        for(CharSequence str : strings) {
+            if(org.apache.commons.lang3.StringUtils.isBlank(str)) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
     /**
      *
-     * @param str
-     * @return <code>true</code> if the given string is not null or containing of only whitespaces else <code>false</code>
+     * @param strings
+     * @return <code>true</code> if all of the given string is not null or not containing of only whitespaces else <code>false</code>
      */
-    public static boolean isNotBlank(String str) {
-        return !StringUtils.isBlank(str);
+    public static boolean isNotBlank(CharSequence[] strings) {
+        return !StringUtils.isBlank(strings);
     }
 
     /**

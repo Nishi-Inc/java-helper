@@ -1,14 +1,14 @@
-package org.nishi.helper;
+package org.nishi.helper.validator;
 
 /**
  * Simple validation methods. Designed for jsoup internal use
  * @author jsoup
  * @since v0.0.1
  */
-public final class Validate {
+public final class HardValidate {
     
     // Singleton
-    private Validate() {}
+    private HardValidate() {}
 
     /**
      * Validates that the object is not null
